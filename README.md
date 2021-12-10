@@ -7,3 +7,5 @@ Input GPIO 6 = chicken button
 
 Out GPIO 24 = candle LED
 
+### How it works
+Utilizes [raspberry-gpio-python](https://sourceforge.net/p/raspberry-gpio-python/wiki/Examples/) to access the GPIO pins.
