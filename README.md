@@ -12,4 +12,4 @@ Utilizes [raspberry-gpio-python](https://sourceforge.net/p/raspberry-gpio-python
 
 
 ### Wiring diagram
-![](https://raw.githubusercontent.com/LookHere/RailRoad/master/images/diagram-1a.jpg)
+![](https://raw.githubusercontent.com/LookHere/RailRoad/master/images/diagram-1a.png)
