@@ -7,9 +7,9 @@ Input GPIO 6 = chicken button
 
 Out GPIO 24 = candle LED
 
-Out GPIO 16 = servo 1
+Out GPIO 18 = servo 1
 
-Out GPIO 21 = servo 2
+Out GPIO ?? = servo 2
 
 ### How it works
 Utilizes [raspberry-gpio-python](https://sourceforge.net/p/raspberry-gpio-python/wiki/Examples/) to access the GPIO pins.
