@@ -24,16 +24,19 @@ def button_chicken(channel):
 def chicken_move():
     global p
 
-    p.start(5) # Initialization
+    SetAngle(90)
+    SetAngle(22)
+    SetAngle(100,0.5)
 
-    p.ChangeDutyCycle(2.5)
-    time.sleep(1)
-    p.ChangeDutyCycle(11.5) # may need to be adjusted
-    time.sleep(1)
-    p.ChangeDutyCycle(20.5)
-    time.sleep(1)
-    p.ChangeDutyCycle(11.5) # may need to be adjusted
     print("Chicken movement done!")
+
+def SetAngle(angle, dur=1):
+    duty = angle / 18 + 2
+    GPIO.output(18, True)
+    p.ChangeDutyCycle(duty)
+    time.sleep(dur)
+    GPIO.output(18, False)
+    p.ChangeDutyCycle(0)
 
 # Define the GPIO pins we'll be using:
 # Inputs:
@@ -49,11 +52,13 @@ GPIO.setup(18, GPIO.OUT)
 
 # Set the initial output values
 GPIO.output(24, GPIO.HIGH)
-p = GPIO.PWM(18, 100)
+p = GPIO.PWM(18, 50)
+p.start(0)
 
 try:
     while True:
         time.sleep(5)
 except KeyboardInterrupt:
     print("Interrupted!")
+    p.stop()
     GPIO.cleanup()
