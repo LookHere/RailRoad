@@ -30,7 +30,7 @@ Unlike other servos that that rotate to a position, this servo rotates backwards
 - Stop - position "90" (1.5ms pulse)
 - Counter Clockwise - position "180" (2ms pulse)
 
-Set to frequency of 50 herts
+We set this program to a frequency of 50 hertz
 Milisecond is 1,000th of a second
 
 
