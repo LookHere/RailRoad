@@ -24,12 +24,23 @@ def button_chicken(channel):
 def chicken_move():
     global p
 
-    SetAngle(90)
-    SetAngle(22)
-    SetAngle(100,0.5)
+#    SetAngle()
+#    SetAngle(22)
+#    SetAngle(100,0.5)
+
+    #zero is full reverse
+    SetServoPercent(1) 
+
+    #50 is stop
+    SetServoPercent(50)
+
+    #100 is full forward
+    SetServoPercent(99)
+
 
     print("Chicken movement done!")
 
+#code for position servo
 def SetAngle(angle, dur=1):
     duty = angle / 18 + 2
     GPIO.output(18, True)
@@ -37,6 +48,46 @@ def SetAngle(angle, dur=1):
     time.sleep(dur)
     GPIO.output(18, False)
     p.ChangeDutyCycle(0)
+
+#code for continuing servo
+def SetServo(duty, dur=1):
+    GPIO.output(18, True)
+    p.ChangeDutyCycle(duty)
+    time.sleep(dur)
+    GPIO.output(18, False)
+    p.ChangeDutyCycle(0)
+
+
+#code for position servo that is scaled up
+def SetServoPercent(duty, dur=2):
+    scaler = make_interpolater(0, 100, 5, 10)
+    GPIO.output(18, True)
+    print("scaler {} ".format(scaler(duty)))
+    p.ChangeDutyCycle(scaler(duty))
+    time.sleep(dur)
+    GPIO.output(18, False)
+    p.ChangeDutyCycle(0)
+
+
+def make_interpolater(left_min, left_max, right_min, right_max):
+    #
+    # Scales one range to another...
+    # Function that returns a function (closure)
+    # see https://stackoverflow.com/questions/1969240/mapping-a-range-of-values-to-another
+    #
+
+    # Figure out how 'wide' each range is  
+    leftSpan = left_max - left_min  
+    rightSpan = right_max - right_min  
+
+    # Compute the scale factor between left and right values 
+    scaleFactor = float(rightSpan) / float(leftSpan) 
+
+    # create interpolation function using pre-calculated scaleFactor
+    def interp_fn(value):
+        return right_min + (value-left_min)*scaleFactor
+
+    return interp_fn
 
 # Define the GPIO pins we'll be using:
 # Inputs:
