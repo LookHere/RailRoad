@@ -1,3 +1,4 @@
+
 import time
 import datetime
 import RPi.GPIO as GPIO
@@ -24,18 +25,27 @@ def button_chicken(channel):
 def chicken_move():
     global p
 
-#    SetAngle()
+#SetAngle method of movement
+#    SetAngle(50)
 #    SetAngle(22)
 #    SetAngle(100,0.5)
 
+#SetServoPercent method of movment
     #zero is full reverse
-    SetServoPercent(1) 
-
     #50 is stop
-    SetServoPercent(50)
-
     #100 is full forward
-    SetServoPercent(99)
+
+    SetServoPercent(50,1) #come out 
+    print("chicken comes out")
+    #SetServoPercent(40,2) #pause
+
+    for x in range(10):
+         SetServoPercent(30,0.1) #jimmy back
+         SetServoPercent(50,0.1) #jimmy forward
+         print("jimmy")
+
+    SetServoPercent(30,1)  #back home
+    print("chicken goes back")
 
 
     print("Chicken movement done!")
@@ -99,6 +109,7 @@ GPIO.add_event_detect(6, GPIO.RISING, callback=button_chicken, bouncetime=200)
 
 # Outputs:
 GPIO.setup(24, GPIO.OUT)
+
 GPIO.setup(18, GPIO.OUT)
 
 # Set the initial output values
