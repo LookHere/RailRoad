@@ -20,7 +20,7 @@ Utilizes [raspberry-gpio-python](https://sourceforge.net/p/raspberry-gpio-python
 (See https://www.digikey.com/en/maker/blogs/2021/how-to-control-servo-motors-with-a-raspberry-pi)
 
 
-##Servo 
+##Continuous Rotation Servo 
 
 Continuous Rotation Servo - FeeTech FS5103R
 
@@ -33,8 +33,6 @@ Unlike other servos that that rotate to a position, this servo rotates backwards
 We set this program to a frequency of 50 hertz
 Milisecond is 1,000th of a second
 
-
-
 ### Servo datasheet
 https://media.digikey.com/pdf/data%20sheets/adafruit%20pdfs/154_web.pdf
 
@@ -42,3 +40,16 @@ https://media.digikey.com/pdf/data%20sheets/adafruit%20pdfs/154_web.pdf
 https://www.instructables.com/Servo-Motor-Control-With-Raspberry-Pi/
 
 https://www.teachmemicro.com/raspberry-pi-pwm-servo-tutorial/
+
+##Position Based Servo
+
+Conected the orange wire to pin 9
+
+- full left - (1ms pulse)
+- middle - (1.5ms pulse)
+- full right - (2ms pulse)
+
+###Servo datasheet
+
+###Servoc coding examples
+https://www.arduino.cc/en/Tutorial/LibraryExamples/Sweep
