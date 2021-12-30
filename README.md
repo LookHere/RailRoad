@@ -20,15 +20,13 @@ Utilizes [raspberry-gpio-python](https://sourceforge.net/p/raspberry-gpio-python
 (See https://www.digikey.com/en/maker/blogs/2021/how-to-control-servo-motors-with-a-raspberry-pi)
 
 
-##Continuous Rotation Servo 
+## Continuous Rotation Servo 
+The first servo was the continuous rotation servo - FeeTech FS5103R.  That didn't work for the chicken movement, but could still be good for other future applications.
 
-Continuous Rotation Servo - FeeTech FS5103R
-
-Unlike other servos that that rotate to a position, this servo rotates backwards or forwards 
-
-- Clockwise - "0" (1ms pulse)
-- Stop - position "90" (1.5ms pulse)
-- Counter Clockwise - position "180" (2ms pulse)
+Unlike other servos that that rotate to a position, this servo rotates backwards or forwards:
+- 1.0ms pulse - Full Speed Clockwise 
+- 1.5ms pulse - Stop
+- 2.0ms pulse - Full Speed Counter Clockwise 
 
 We set this program to a frequency of 50 hertz
 Milisecond is 1,000th of a second
@@ -41,15 +39,24 @@ https://www.instructables.com/Servo-Motor-Control-With-Raspberry-Pi/
 
 https://www.teachmemicro.com/raspberry-pi-pwm-servo-tutorial/
 
-##Position Based Servo
+## Position Based Servo
+The secons servo we used was a standard servo - MCM Electronics TowerPro SG-5.  
+
+This servo used pulses to move to specific locations
+- 1.0ms pulse - Full Left "0" position  
+- 1.5ms pulse - Middle "90" position 
+- 2.0ms pulse - Full Right "180" position 
 
 Conected the orange wire to pin 9
 
-- full left - (1ms pulse)
-- middle - (1.5ms pulse)
-- full right - (2ms pulse)
 
-###Servo datasheet
+### Servo datasheet
 
-###Servoc coding examples
+### Servoc coding examples
 https://www.arduino.cc/en/Tutorial/LibraryExamples/Sweep
+
+
+## Lighting
+To get the lights to flicker on their own, we're using "Evil Mad Science Candle Flicker LED Assortment"
+
+The long side for LED connects to the positive (red wire), then to a 220 Ohm Resistor, and then to GPIO 24.  The short side connects to the ground (green wire).
