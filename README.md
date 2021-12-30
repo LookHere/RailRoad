@@ -28,8 +28,11 @@ Unlike other servos that that rotate to a position, this servo rotates backwards
 - 1.5ms pulse - Stop
 - 2.0ms pulse - Full Speed Counter Clockwise 
 
+This was connected to GPIO 18.
+
 We set this program to a frequency of 50 hertz
 Milisecond is 1,000th of a second
+
 
 ### Servo datasheet
 https://media.digikey.com/pdf/data%20sheets/adafruit%20pdfs/154_web.pdf
@@ -43,11 +46,11 @@ https://www.teachmemicro.com/raspberry-pi-pwm-servo-tutorial/
 The secons servo we used was a standard servo - MCM Electronics TowerPro SG-5.  
 
 This servo used pulses to move to specific locations
-- 1.0ms pulse - Full Left "0" position  
-- 1.5ms pulse - Middle "90" position 
-- 2.0ms pulse - Full Right "180" position 
+- 1.0ms pulse - Full Left, -90 degree position  
+- 1.5ms pulse - Middle, 0 degree position 
+- 2.0ms pulse - Full Right, 90 degree position 
 
-Conected the orange wire to pin 9
+The orange wire is connected to GPIO 9.  The brown is connected to ground.  The yellow is connected to the 5 volt power.
 
 
 ### Servo datasheet
