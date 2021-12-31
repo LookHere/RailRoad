@@ -28,7 +28,7 @@ Unlike other servos that that rotate to a position, this servo rotates backwards
 - 1.5ms pulse - Stop
 - 2.0ms pulse - Full Speed Counter Clockwise 
 
-This was connected to GPIO 18.
+The white (or yellow) wire is connected to GPIO 18.  The red (or orange) is connected to the 5 volt power. The black (or brown) is connected to ground.  
 
 We set this program to a frequency of 50 hertz
 Milisecond is 1,000th of a second
@@ -50,7 +50,7 @@ This servo used pulses to move to specific locations
 - 1.5ms pulse - Middle, 0 degree position 
 - 2.0ms pulse - Full Right, 90 degree position 
 
-The orange wire is connected to GPIO 9.  The brown is connected to ground.  The yellow is connected to the 5 volt power.
+The orange wire is connected to GPIO 9.  The brown is connected to ground.  The yellow is connected to the 5 volt power.  ????
 
 
 ### Servo datasheet
