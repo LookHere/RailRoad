@@ -19,6 +19,13 @@ Utilizes [raspberry-gpio-python](https://sourceforge.net/p/raspberry-gpio-python
 ![](https://raw.githubusercontent.com/LookHere/RailRoad/master/images/diagram-1b.png)
 (See https://www.digikey.com/en/maker/blogs/2021/how-to-control-servo-motors-with-a-raspberry-pi)
 
+To wire the servo: 
+- The white (or yellow) wire is connected to the signal.  
+- The red (or orange) is connected to the 5 volt power. 
+- The black (or brown) is connected to ground.  
+
+We set this program to a frequency of 50 hertz.
+Milisecond is 1,000th of a second.
 
 ## Continuous Rotation Servo 
 The first servo was the continuous rotation servo - FeeTech FS5103R.  That didn't work for the chicken movement, but could still be good for other future applications.
@@ -26,13 +33,9 @@ The first servo was the continuous rotation servo - FeeTech FS5103R.  That didn'
 Unlike other servos that that rotate to a position, this servo rotates backwards or forwards:
 - 1.0ms pulse - Full Speed Clockwise 
 - 1.5ms pulse - Stop
-- 2.0ms pulse - Full Speed Counter Clockwise 
-
-The white (or yellow) wire is connected to GPIO 18.  The red (or orange) is connected to the 5 volt power. The black (or brown) is connected to ground.  
-
-We set this program to a frequency of 50 hertz
-Milisecond is 1,000th of a second
-
+- 2.0ms pulse - Full Speed Counter Clockwise
+ 
+For this servo, we used GPIO 18 to control the movement.
 
 ### Servo datasheet
 https://media.digikey.com/pdf/data%20sheets/adafruit%20pdfs/154_web.pdf
@@ -43,15 +46,14 @@ https://www.instructables.com/Servo-Motor-Control-With-Raspberry-Pi/
 https://www.teachmemicro.com/raspberry-pi-pwm-servo-tutorial/
 
 ## Position Based Servo
-The secons servo we used was a standard servo - MCM Electronics TowerPro SG-5.  
+The second servo we used was a standard servo - MCM Electronics TowerPro SG-5.  
 
 This servo used pulses to move to specific locations
 - 1.0ms pulse - Full Left, -90 degree position  
 - 1.5ms pulse - Middle, 0 degree position 
 - 2.0ms pulse - Full Right, 90 degree position 
 
-The yellow wire is connected to GPIO 9 (also known as miso).  The orange is connected to the 5 volt power.  The brown is connected to ground.
-
+For this servo, we used GPIO 9 (also known as miso) to control the movement.
 
 ### Servo datasheet
 
