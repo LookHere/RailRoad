@@ -50,7 +50,7 @@ This servo used pulses to move to specific locations
 - 1.5ms pulse - Middle, 0 degree position 
 - 2.0ms pulse - Full Right, 90 degree position 
 
-The orange wire is connected to GPIO 9.  The brown is connected to ground.  The yellow is connected to the 5 volt power.  ????
+The yellow wire is connected to GPIO 9 (also known as miso).  The orange is connected to the 5 volt power.  The brown is connected to ground.
 
 
 ### Servo datasheet
