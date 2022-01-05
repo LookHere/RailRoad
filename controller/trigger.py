@@ -2,6 +2,11 @@ import time
 import datetime
 import RPi.GPIO as GPIO
 import os
+from pydub import AudioSegment
+from pydub.playback import play
+
+#song = AudioSegment.from_wav("sound.wav")
+#play(song)
 
 GPIO.setmode(GPIO.BCM)
 
@@ -19,6 +24,7 @@ def button_chicken(channel):
     # Detects chicken button press
     #
     print("Chicken button pressed!")
+    play(AudioSegment.from_wav("chicken2.wav"))
     chicken_move()
 
 def chicken_move():
