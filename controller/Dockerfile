@@ -7,5 +7,6 @@ WORKDIR /usr/src/app
 RUN pip3 install RPi.GPIO
 
 COPY *.py ./
+COPY *.mp3 ./
 
 CMD [ "sleep", "infinity" ]
