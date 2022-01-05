@@ -8,5 +8,6 @@ RUN pip3 install RPi.GPIO
 
 COPY *.py ./
 COPY *.mp3 ./
+COPY *.wav ./
 
 CMD [ "sleep", "infinity" ]
