@@ -4,7 +4,8 @@ WORKDIR /usr/src/app
 
 #RUN apt-get update && apt-get install -y ttf-dejavu libfreetype6-dev
 
-RUN pip3 install RPi.GPIO
+RUN apt update && apt install -y ffmpeg
+RUN pip3 install RPi.GPIO pydub
 
 COPY *.py ./
 COPY *.mp3 ./
