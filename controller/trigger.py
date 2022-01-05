@@ -24,7 +24,6 @@ def button_chicken(channel):
     # Detects chicken button press
     #
     print("Chicken button pressed!")
-    play(AudioSegment.from_wav("chicken2.wav"))
     chicken_move()
 
 def chicken_move():
@@ -57,22 +56,34 @@ def chicken_move():
     """
 
 #Position based movement
-    print("chicken start")
-    p.ChangeDutyCycle(2.5)
-    time.sleep(0.25)
+    print("chicken move start")
     p.ChangeDutyCycle(1.5)
-    time.sleep(0.25)
-    p.ChangeDutyCycle(3.5)
-    time.sleep(0.25)
-    p.ChangeDutyCycle(1.5)
-    time.sleep(0.25)
-    p.ChangeDutyCycle(3.5)
-    time.sleep(0.25)
-    p.ChangeDutyCycle(1.5)
-    time.sleep(0.25)
-    p.ChangeDutyCycle(3.5)
-    time.sleep(0.25)
-    p.ChangeDutyCycle(12.5)
+    print("1.5")
+    time.sleep(0.5)
+    """p.ChangeDutyCycle(3)
+    print("6.5")
+    time.sleep(1)
+    p.ChangeDutyCycle(5)
+    print("7")
+    time.sleep(1)
+    p.ChangeDutyCycle(7.5)
+    print("7.5")
+    time.sleep(1)
+    p.ChangeDutyCycle(10)
+    print("8")
+    time.sleep(1)
+    """
+    p.ChangeDutyCycle(0)
+    print("0")
+    time.sleep(0.5)
+    play(AudioSegment.from_wav("chicken2.wav"))
+    time.sleep(0.5)
+    p.ChangeDutyCycle(25)
+    print("25")
+    time.sleep(0.5)
+    p.ChangeDutyCycle(0)
+    print("0")
+    time.sleep(0.5)
     print("chicken end")
 
 
