@@ -1,0 +1,12 @@
+I created these files from scratch in blender, but they are based on the idea of running a servo's motion through a Scotch yoke.
+
+https://en.wikipedia.org/wiki/Scotch_yoke
+
+These are made to fit the standard servo size, but of course manufacturing can vary.
+
+The files are:
+ - ScotchYok09.blend - the origonal blender file that includes both the support and the yoke
+ - SupportOnly09.stl - the read-to-print file for the support
+ - YokeOnly09.stl - the ready-to-print file for the yoke
+ 
+ All files have been 3d printed on a filament printer without supports and work as expected.
