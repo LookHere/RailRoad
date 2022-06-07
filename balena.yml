@@ -14,6 +14,7 @@ assets:
       url: >-
         https://github.com/LookHere/RailRoad/blob/48443472f2e14614ad3c1b3862ef14b87ea43b4f/images/Logo.png
 data:
+  application
   defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:
     - raspberrypi4-64
