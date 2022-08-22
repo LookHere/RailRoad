@@ -4,7 +4,7 @@ Many model railroad enthusiasts have basements filled with photo-realistic layou
 
 <img src="https://github.com/LookHere/RailRoad/blob/main/images/Logo.png" width=100% height=100%>
 
-Although I’ve never worked with Raspberry Pi, servos, resistors or done much coding, the balena platform made it easy to get started. It also makes it easy to add and manage additional devices when I’m ready to expand my setup. Although building my first scene still took some effort, I’m happy with the final results (see video above).
+Although I’ve never worked with Raspberry Pi, servos, resistors or done much coding, the balena platform made it easy to get started. It also makes it easy to add and manage additional devices when I’m ready to expand my setup. Although building my first scene still took some effort, I’m happy with the final results (see video at the end).
 
 ## Part of the balenaLabs Residency Projects
 
