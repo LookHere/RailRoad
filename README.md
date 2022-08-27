@@ -204,6 +204,4 @@ For this servo, we used GPIO 9 (also known as miso) to control the movement.
 https://www.arduino.cc/en/Tutorial/LibraryExamples/Sweep
 
 ## Lighting
-To get the lights to flicker on their own, we're using "Evil Mad Science Candle Flicker LED Assortment"
-
 The long side for LED connects to the positive (red wire), then to a 220 Ohm Resistor, and then to GPIO 24.  The short side connects to the ground (green wire).
