@@ -154,9 +154,7 @@ If you're looking to recreate this project for yourself, here are more of the te
 - Out GPIO 18 = servo 1 (Continuous rotation)
 - Out GPIO 9 = servo 2 (position based)
 
-### How it works
 Utilizes [raspberry-gpio-python](https://sourceforge.net/p/raspberry-gpio-python/wiki/Examples/) to access the GPIO pins.
-
 
 ## Overall Wiring diagram
 ![](https://raw.githubusercontent.com/LookHere/RailRoad/master/images/diagram-1b.png)
@@ -197,8 +195,6 @@ This servo used pulses to move to specific locations
 - 2.0ms pulse - Full Right, 90 degree position 
 
 For this servo, we used GPIO 9 (also known as miso) to control the movement.
-
-### Servo datasheet
 
 ### Servoc coding examples
 https://www.arduino.cc/en/Tutorial/LibraryExamples/Sweep
